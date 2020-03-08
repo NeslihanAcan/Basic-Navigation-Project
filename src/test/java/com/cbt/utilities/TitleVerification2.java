@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class TitleVerification2 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
 
         List<String> urls = Arrays.asList(//"https://lulugandgeorgia.com",
                 "https://wayfair.com/",
@@ -21,7 +21,7 @@ public class TitleVerification2 {
             driver.get(eachUrls);
             String title = driver.getTitle();
             System.out.println(title);
-            Thread.sleep(2000);
+            BrowsUtils.wait(2);
             if (eachUrls.contains(title.replace(" ","").toLowerCase())) {
                 System.out.println("Pass");
             } else {
